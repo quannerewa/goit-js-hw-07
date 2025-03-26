@@ -1,4 +1,4 @@
-const categoriesList = document.querySelectorAll(".categories-item");
+const categoriesList = document.querySelectorAll(".item");
 const elementsOfCategory = document.querySelectorAll(
   ".elements-list > .elem-list-items"
 );
@@ -9,9 +9,8 @@ categoriesList.forEach((category) => {
   const nameOfCategory = category.querySelector(".item-title").textContent;
 
   const elementsOfCategory = category.querySelectorAll(
-    ".elements-list > .elem-list-items"
-  ).length;
+    "ul > li" );
 
   console.log(`Category: ${nameOfCategory}`);
-  console.log(`Elements: ${elementsOfCategory}`);
+  console.log(`Elements: ${elementsOfCategory.length}`);
 });
